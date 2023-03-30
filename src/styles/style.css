@@ -1,0 +1,110 @@
+.homePage{
+    display: flex;
+    margin: 25px 25px;
+    flex-flow: row wrap;
+}
+#imgContainer{
+    width: 50%;
+    text-align: center;
+    height: 100vh;
+}
+
+#rightBar{
+    text-align: center;
+    margin: auto;
+    color: #006238;
+}
+#rightBar h3{
+    font-size: 40px;
+}
+#rightBar button{
+    width: 100px;
+    height: 35px;
+    background-color: white;
+    border: 2px solid #006238;
+    border-radius: 10px;
+    color: #006238;
+    font-weight: bold;
+}
+#postPage{
+    width: 100%;
+    box-sizing: border-box;
+}
+#topnav{
+    display: flex;
+    height: 10vh;
+    border-bottom: 2px solid #006238;
+}
+#topnav #iconContainer{
+    display: flex;
+    width: 50%;
+    box-sizing: border-box;
+    color: #006238;
+}
+#topnav #iconContainer img{
+    width: 40px;
+}
+#topnav #iconContainer *{
+    padding: 5px;
+    margin: auto 0.5%;
+}
+#topnav #newPost{
+    width: 50%;
+    box-sizing: border-box;
+}
+#topnav #newPost img{
+    padding: 1.5%;
+    margin-left: 80%;
+    padding-right: 2%;
+}
+#outletContainer{
+    width: 80%;
+    margin: auto;
+    box-sizing: border-box;
+}
+.form-container{
+    width: 70%;
+    margin: 5% auto;
+    border: 1px solid #cccc;
+}
+.field-container{
+    margin: 2.5%;
+}
+.field-container input{
+    width: 40%;
+    margin : auto 2%
+}
+.button-container{
+    width: 60%;
+    margin: 5% auto;
+    text-align: center;
+}
+#main-container{
+    width: 60%;
+    margin: 2% auto;
+    border: 1px solid #cccc;
+    box-shadow: 3px 3px 3px #cccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+#main-container #name-container{
+    font-weight: bold;
+    margin-left: 2%;
+    font-size: 25px;
+    
+}
+#main-container #location-container{
+    color: darkslategrey;
+    margin-left: 2%;
+}
+#main-container #img-container{
+    width: 95%;
+    margin: auto;
+}
+#main-container #img-container img{
+    max-width: 100%;
+}
+#main-container p {
+    font-size: 20px;
+    margin-left: 2%;
+}
