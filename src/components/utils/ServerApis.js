@@ -1,5 +1,5 @@
 
-const BASE_URL = 'http://localhost:5002'
+const BASE_URL = 'https://instaclonejjserver.onrender.com'
 function postData(data){
     return fetch(`${BASE_URL}/post` , {
         method : "POST",

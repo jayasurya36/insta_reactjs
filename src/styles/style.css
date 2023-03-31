@@ -63,9 +63,11 @@
     box-sizing: border-box;
 }
 .form-container{
-    width: 70%;
+    width: 50%;
     margin: 5% auto;
     border: 1px solid #cccc;
+    background-color: #cccc;
+    border-radius: 20px;
 }
 .field-container{
     margin: 2.5%;
@@ -91,15 +93,23 @@
     font-weight: bold;
     margin-left: 2%;
     font-size: 25px;
-    
+    display: flex;    
+}
+#main-container #name-container #name{
+    width: 50%;
+    box-sizing: border-box;
+}
+#main-container #name-container #more{
+    width: 50%;
+    box-sizing: border-box;
+    text-align: right;
+    padding-right: 4%;
+    padding-top: 2%;
 }
 #main-container #location-container{
     color: darkslategrey;
     margin-left: 2%;
-}
-#main-container #img-container{
-    width: 95%;
-    margin: auto;
+    margin-bottom: 2%;
 }
 #main-container #img-container img{
     max-width: 100%;
@@ -107,4 +117,25 @@
 #main-container p {
     font-size: 20px;
     margin-left: 2%;
+}
+#preview-image{
+    width : 90%;
+    margin : 1% auto;
+}
+#preview-image img{
+    max-width: 100%;
+    padding: 1%;
+}
+.button-container button{
+    width: 30%;
+    height: 30px;
+    background-color: #006238;
+    color: #d4cfcf;
+    border: 1px solid #d4cfcf;
+    border-radius: 20px;
+}
+#main-container #options-container *{
+    padding: 25px;
+    padding-bottom: 5px;
+    padding-right: 10px;
 }

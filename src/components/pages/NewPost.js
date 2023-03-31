@@ -1,9 +1,11 @@
 import { useState } from "react"
 import { postData } from "../utils/ServerApis";
 import { useNavigate } from "react-router-dom";
+import Preview from "./Preview";
 export default function NewPost() {
 
     const navigate = useNavigate();
+    const [btnState , setbtnState] = useState(false);
     const [formData, setFormData] = useState({
         PostImage: "",
         author: "",
@@ -13,6 +15,7 @@ export default function NewPost() {
     
     function SubmittingForm(e) {
         e.preventDefault();
+        setbtnState(true)
         const data = new FormData();
         data.append('PostImage' , formData.PostImage);
         data.append('author' , formData.author);
@@ -25,7 +28,11 @@ export default function NewPost() {
             }else{
                 console.log(res);
             }
+            setbtnState(true);
             navigate('/posts/all')
+            
+        }).then(() => {
+            setbtnState(false);
         })
         setFormData({
             author: "",
@@ -46,6 +53,9 @@ export default function NewPost() {
                 }}
                 />
             </div>
+            {
+                formData.PostImage ? <Preview post={URL.createObjectURL(formData.PostImage)}/> : ""
+            }
             <div className="field-container">
                 <input type='text' name="author"
                     placeholder="Author name"
@@ -81,7 +91,7 @@ export default function NewPost() {
                 />
             </div>
             <div className="button-container">
-                <button type="submit">Submit</button>
+                <button type="submit" disabled = {btnState}>Submit</button>
             </div>
         </form>
     </div>
