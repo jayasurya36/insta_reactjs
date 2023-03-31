@@ -58,7 +58,7 @@
     padding-right: 2%;
 }
 #outletContainer{
-    width: 80%;
+    width: 100%;
     margin: auto;
     box-sizing: border-box;
 }
@@ -68,6 +68,24 @@
     border: 1px solid #cccc;
     background-color: #cccc;
     border-radius: 20px;
+}
+@media (max-width: 750px) {
+    .form-container{
+        width: 100%;
+        margin: 25% auto;
+        border: 1px solid #cccc;
+        background-color: #cccc;
+        border-radius: 20px;
+    } 
+    .field-container{
+        display: flex;
+        margin: 2.5%;
+    }
+    .field-container input{
+        display: block;
+        width: 90%;
+        margin : auto 2%
+    }
 }
 .field-container{
     margin: 2.5%;
@@ -89,6 +107,17 @@
     border-radius: 15px;
     box-sizing: border-box;
 }
+@media (max-width: 750px) {
+   #main-container {
+    width: 100%;
+    margin: 2% auto;
+    border: 1px solid #cccc;
+    box-shadow: 3px 3px 3px #cccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+   }
+}
+ 
 #main-container #name-container{
     font-weight: bold;
     margin-left: 2%;
