@@ -1,17 +1,9 @@
-import { useEffect, useState } from "react"
-import { getPosts } from "../utils/ServerApis";
 import Post from "./Post";
+import { usePostContext } from "../../context/ContextProvider";
 
 
 export default function Allposts(){
-    const[posts , setPosts] = useState([]);
-    useEffect(() =>{
-        getPosts()
-        .then(data =>{
-            setPosts(data.reverse())
-        })
-    } , [])
-    console.log(posts);
+    const {posts} = usePostContext();
     return <div id="outletDiv">
         {
             posts.map(post => (

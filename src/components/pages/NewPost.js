@@ -2,8 +2,9 @@ import { useState } from "react"
 import { postData } from "../utils/ServerApis";
 import { useNavigate } from "react-router-dom";
 import Preview from "./Preview";
+import { usePostContext } from "../../context/ContextProvider";
 export default function NewPost() {
-
+    const {updater , updatePosts} = usePostContext();
     const navigate = useNavigate();
     const [btnState , setbtnState] = useState(false);
     const [formData, setFormData] = useState({
@@ -21,16 +22,14 @@ export default function NewPost() {
         data.append('author' , formData.author);
         data.append('location' , formData.location);
         data.append('description' , formData.description)
-        console.log(data);
         postData(data).then(res => {
-            if (res.status === "OK") {
-                console.log("posted Successfully");
-            }else{
-                console.log(res);
+            if (res.status === 200) {
+                setbtnState(true);
+                updatePosts(updater+1);
+                navigate('/posts/all')
+            }else{  
+                alert('Not able to post')
             }
-            setbtnState(true);
-            navigate('/posts/all')
-            
         }).then(() => {
             setbtnState(false);
         })
